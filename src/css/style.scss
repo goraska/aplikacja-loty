@@ -1,0 +1,164 @@
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body {
+    width: auto;
+    height:auto;
+}
+
+// header-section
+
+.header-section {
+    background-color: #5e227f;
+    padding: 10px 20px;
+}
+
+.wrong-password {
+    display: none;
+}
+
+// main-section
+
+.main-section {
+    height: 960px;
+}
+
+.carousel-style {
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    padding-top: 30px;
+
+}
+
+.carousel-img {
+    height: 900px;
+    width: 90%;
+}
+
+.card-style-main {
+    position: relative;
+    top: 100px;
+    margin: 0 0 0 100px;
+}
+
+
+
+.form-input{
+    margin: 15px 0;
+}
+
+.form-button {
+    text-align: left;
+}
+
+.search-btn {
+    width: 100%;
+}
+
+
+.card-style-people {
+    display: none;
+    position: relative; 
+    top: 100px;
+    margin: 0 0;
+
+    .people-card {
+        width: 100%;
+        display: inline-flex;
+        padding: 0 20px;
+        margin: 5px 0;
+        .people-desc{
+            width: 100%;
+            margin-top: 8px;
+        }
+        
+    }
+}
+
+.total-alert {
+    display: none;
+    width: 100%;
+}
+
+.ok-btn {
+    width: 100%;
+}
+
+
+
+.all-cards {
+    display: inline-flex;
+    
+}
+
+//reservation htm
+
+
+
+.summary {
+    background-color: #f2f4fb;
+    padding: 0;
+    width: 20%;
+    height: 1000px;
+    position: relative;
+    float: right;
+    flex-wrap: wrap;
+    h3 {
+        padding-top: 20px;
+        text-align: center;
+    }
+    h5 {
+        padding: 5px 10px;
+    }
+    .sum {
+        background-color: #f8b500;
+        font-weight: bold;
+    }
+}
+
+
+
+
+.opt-packages {
+    display: flex;
+    justify-content: center;
+    .package {
+        margin: 30px 30px;
+        display: flex;
+    }       
+    .package-btn {
+        width: 70%;
+        text-align: center;
+    }
+    .button-aligment_go {
+        margin-top: 95px;
+    }
+    .button-aligment_basic {
+        margin-top: 240px;
+    }
+    .opt-additional {
+        margin: 0;
+    }
+  }
+    
+
+
+
+
+
+// footer-section
+
+.footer-section {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #5e227f;
+    padding: 10px 20px;
+}
+
+
+.aaa {
+    background-color: red;
+}

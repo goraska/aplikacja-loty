@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+
+        <!-- header section     -->
+        <section class="header-section">
+          <ul class="nav justify-content-end">
+            <li class="nav-item"><a id="hello"></a></li>
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="modal" data-target="#LogIn" id="log-in" href="">Log in</a>
+            </li>
+            <li  class="nav-item"><a class="nav-link active"  id ="log-out-btn" href="">Log out</a></li>
+          </ul>
+      
+          <!-- Log in modal -->
+          <div class="modal fade" id="LogIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog  modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Zaloguj się</h5>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="InputEmail">Email address</label>
+                      <input type="email" class="form-control" id="InputEmail">
+                    </div>
+                    <div class="form-group">
+                      <label for="InputPassword">Password</label>
+                      <input type="password" class="form-control" id="InputPassword">
+                    </div>
+                    <div class="alert alert-danger wrong-password" role="alert" id="wrong-password">Wrong password or email</div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Anuluj</button>
+                  <button type="button" class="btn btn-warning" id="log-in-btn">Zaloguj się</button>            
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>      
+        </section>
+
+        <!-- main section     -->
+
+        <section class="main-section_2">
+
+          <div class="summary">
+            <h3>Podsumowanie</h3>
+            <h5>LOT</h5>
+            <h5>DATA</h5>
+            <h5>PASAŻEROWNIE</h5>
+            <h5>PAKIET</h5>
+            <h5>MIEJSCA</h5>
+            <h5>USŁUGI</h5>                
+            <h5 class="sum">SUMA:</h5>
+        </div>
+
+        <div class="details">
+
+          <div class="opt-packages">
+
+            <div class="col-lg-3 package">
+              <div class="card">
+                <div class="card-header">
+                  <h5>RelaxLot PLUS</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Bezpłatny bagaż podręczny (40 x 30 x 20 cm) w kabinie, umieszczony pod fotelem</p>
+                  <p class="card-text">Podręczna walizka na kółkach (55 x 40 x 23 cm) w kabinie</p>
+                  <p class="card-text">Pierwszeństwo wejścia na pokład</p>
+                  <p class="card-text">Odprawa priorytetowa</p>
+                  <p class="card-text">Oprawa online do 30 dni przed wylotem</p>
+                  <p class="card-text">Bezpłatna odprawa na lotnisku i online</p>
+                  <p class="card-text">Informacje o locie</p>
+                  <p class="card-text">Drink powitalny na pokładzie</p>
+                  <div class="text-center button-aligment"> 
+                    <button type="button" class="btn btn-primary package-btn">Click Me!</button> 
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 package">
+              <div class="card">
+                <div class="card-header">
+                  <h5>RelaxLot GO</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Bezpłatny bagaż podręczny (40 x 30 x 20 cm) w kabinie, umieszczony pod fotelem</p>
+                  <p class="card-text">Podręczna walizka na kółkach (55 x 40 x 23 cm) w kabinie</p>
+                  <p class="card-text">Pierwszeństwo wejścia na pokład</p>
+                  <p class="card-text">Odprawa priorytetowa</p>                  
+                  <p class="card-text">Oprawa online do 30 dni przed wylotem</p>
+                  <p class="card-text">Informacje o locie</p>
+                  <div class="text-center button-aligment_go"> 
+                    <button type="button" class="btn btn-primary package-btn">Click Me!</button> 
+                  </div>                  
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 package">
+              <div class="card">
+                <div class="card-header">
+                  <h5>RelaxLot BASIC</h5>
+                </div>
+                <div class="card-body">
+                  <p class="card-text">Bezpłatny bagaż podręczny (40 x 30 x 20 cm) w kabinie, umieszczony pod fotelem</p>
+                  <p class="card-text">Oprawa online do 2 dni przed wylotem</p>
+                  <p class="card-text">Informacje o locie</p>
+                  <div class="text-center button-aligment_basic"> 
+                    <button type="button" class="btn btn-primary package-btn">Click Me!</button> 
+                  </div> 
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+            <div class="opt-packages">
+
+              <div class="col-lg-5 package opt-additional">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                  <img class="card-img-bottom" src="" alt="Card image cap">
+                </div>
+              </div>
+
+              <div class="col-lg-5 package opt-additional">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                  </div>
+                  <img class="card-img-bottom" src="" alt="Card image cap">
+                </div>
+              </div>
+
+              
+
+              
+
+
+            </div>
+
+            
+              
+
+
+
+
+          
+          
+        </div>
+
+        </section>
+
+            
+
+
+
+
+
+
+
+
+
+            
+        
+
+
+        <section class="footer-section">
+            <div id="test-json"></div>
+            <p>Stopka</p>
+          </section>
+        
+
+    
+</body>
+</html>

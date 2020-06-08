@@ -1,0 +1,37 @@
+[{
+    "id": 1,
+    "first_name": "Jeanette",
+    "last_name": "Penddreth",
+    "email": "jpenddreth0@census.gov",
+    "gender": "Female",
+    "password": "123"
+  }, {
+    "id": 2,
+    "first_name": "Giavani",
+    "last_name": "Frediani",
+    "email": "gfrediani1@senate.gov",
+    "gender": "Male",
+    "password": "123"
+  }, {
+    "id": 3,
+    "first_name": "Noell",
+    "last_name": "Bea",
+    "email": "nbea2@imageshack.us",
+    "gender": "Female",
+    "password": "123"
+  }, {
+    "id": 4,
+    "first_name": "Willard",
+    "last_name": "Valek",
+    "email": "wvalek3@vk.com",
+    "gender": "Male",
+    "password": "123"
+  }, {
+    "id": 5,
+    "first_name": "Stasia",
+    "last_name": "goras",
+    "email": "kasia@kg.com",
+    "gender": "Male",
+    "password": "kasia"
+  }]
+  
