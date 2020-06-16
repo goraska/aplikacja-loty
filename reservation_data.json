@@ -1,0 +1,53 @@
+[{
+    "id": 1,
+    "departure": "Moskwa",
+    "destination": "Porto",
+    "price_adult": 999,
+    "price_child": 669,
+    "price_baby": 0,
+    "plane": 1
+  }, {
+    "id": 2,
+    "departure": "Moskwa",
+    "destination": "Wroclaw",
+    "price_adult": 799,
+    "price_child": 499,
+    "price_baby": 0,
+    "plane": 2
+  }, {
+    "id": 3,
+    "departure": "Porto",
+    "destination": "Wroclaw",
+    "price_adult": 399,
+    "price_child": 299,
+    "price_baby": 0,
+    "plane": 3
+  }, {
+    "id": 4,
+    "departure": "Porto",
+    "destination": "Moskwa",
+    "price_adult": 959,
+    "price_child": 499,
+    "price_baby": 0,
+    "plane": 1
+  }, {
+    "id": 5,
+    "departure": "Wroclaw",
+    "destination": "Porto",
+    "price_adult": 449,
+    "price_child": 159,
+    "price_baby": 0,
+    "plane": 3
+  }, {
+    "id": 6,
+    "departure": "Wroclaw",
+    "destination": "Moskwa",
+    "price_adult": 839,
+    "price_child": 459,
+    "price_baby": 0,
+    "plane": 2
+  }]
+
+
+
+  

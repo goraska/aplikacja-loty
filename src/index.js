@@ -128,13 +128,14 @@ function validate() {
                     valid = true;
                     $('#wrong-password').hide();
                     if (check ==2) {
+                        localStorage.removeItem("uname");
+                        localStorage.setItem("uname", element.first_name);                       
                         window.location = "/reservation.html"
                     }
                     else {
                         $('#LogIn').modal('toggle');
-                        console.log(element.first_name);
                         $('#hello').html(element.first_name + ", witaj na pokładzie");
-                        $('#log-in').hide();                        
+                        $('#log-in').hide();                     
                     }
                 }
                 else {
@@ -153,6 +154,20 @@ $('#check-btn').on('click', function () {
     var child = parseInt($('#child-result').text());
     var baby = parseInt($('#baby-result').text());
     var date = $('#flight-date').val();
+
+    var dep = $("#departure option:selected").html()
+    var dest = $("#destination option:selected").html()
+
+    localStorage.removeItem("lot");
+    localStorage.removeItem("data");
+    localStorage.removeItem("dorosli");
+    localStorage.removeItem("dzieci");
+    localStorage.removeItem("bobasy");
+    localStorage.setItem("lot", `${dep} ---> ${dest}`);
+    localStorage.setItem("data", date);
+    localStorage.setItem("dorosli", adult);
+    localStorage.setItem("dzieci", child);
+    localStorage.setItem("bobasy", baby);    
 
     if (departure == 0) {
         alert("wybierz miejsce wylotu");
@@ -174,8 +189,22 @@ $('#check-btn').on('click', function () {
             check = 2
             $('#check-btn').attr('data-toggle','modal').attr('data-target','#LogIn');
         }
-    }    
+    }
+    
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
