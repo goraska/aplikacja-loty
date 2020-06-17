@@ -7,6 +7,7 @@ const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const autoprfixer = require("autoprefixer");
 const webpack = require("webpack");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const SvgStore = require('webpack-svgstore-plugin');
 
 
 
@@ -59,7 +60,16 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: "jquery",
             jQuery: "jquery"
-        })        
+        }),
+        new SvgStore({
+            // svgo options
+            svgoOptions: {
+              plugins: [
+                { removeTitle: true }
+              ]
+            },
+            prefix: 'icon'
+          })       
     ],
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -105,7 +115,8 @@ module.exports = {
     {
         test: /\.(html)$/,
         use: ["html-loader"]
-    }
+    },
+    
 ]
 }
 }
