@@ -71,7 +71,7 @@ $(document).ready(function () {
 
     })
 
-    fetch("reservation_data.json")
+    fetch("https://raw.githubusercontent.com/goraska/json-loty/master/reservation_data.json")
         .then((resp) => resp.json())
         .then(function (data) {
             data.forEach(function (element) {

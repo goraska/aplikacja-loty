@@ -117,7 +117,7 @@ function validate() {
     var un = $('#InputEmail').val();
     var pw = $('#InputPassword').val();
 
-    fetch("users.json")
+    fetch("https://raw.githubusercontent.com/goraska/json-loty/master/users.json")
         .then((resp) => resp.json())
         .then(function (data) {
             data.forEach(function (element) {
