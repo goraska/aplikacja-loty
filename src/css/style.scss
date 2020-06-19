@@ -1,9 +1,14 @@
 @import "node_modules/bootstrap/scss/bootstrap";
 
+$purple-color: #5e227f;
+$grey-color: #f2f4fb;
+$yellow-color: #f8b500;
+$pink-color: #d22780;
+
 // header-section
 
 .header-section {
-    background-color: #5e227f;
+    background-color: $purple-color;
     nav {
         padding: 0;
         margin: 0;
@@ -15,11 +20,11 @@
         font-weight: 800;
         font-size: 2.5rem;
         padding: 0.2rem;
-        color: #f2f4fb;
+        color: $grey-color;
     }
     .nav-login {
         a {
-            color: #f8b500;
+            color: $yellow-color;
             font-weight: 600;
             font-size: 1.1rem;
         }
@@ -29,7 +34,7 @@
             padding: 0.5rem 1rem;
             margin: 0;
             display: block;
-            color: #f8b500;
+            color: $yellow-color;
         }
     }
 }
@@ -41,13 +46,13 @@
 // main-section
 
 .lot-btn {
-    background-color: #f8b500;
-    color: #5e227f;
+    background-color: $yellow-color;
+    color: $purple-color;
     font-weight: 600;
 }
 
 .lot-btn:hover {
-    color: #5e227f;
+    color: $purple-color;
 }
 
 .main-section {
@@ -132,14 +137,14 @@
 }
 
 .sidebar_reserv {
-    background-color: #f2f4fb;
+    background-color: $grey-color;
     height: 100%;
     padding: 0;
     flex-wrap: wrap;
     h3 {
         padding-top: 20px;
         text-align: center;
-        color: #5e227f;
+        color: $purple-color;
         font-weight: 700;
     }
     hr {
@@ -149,14 +154,14 @@
         padding: 5px 10px;
     }
     h6 {
-        color: #d22780;
+        color: $pink-color;
         font-weight: 700;
         margin-left: 20px;
         font-size: 1.2rem;
     }
     .sum {
-        background-color: #f8b500;
-        color: #5e227f;
+        background-color: $yellow-color;
+        color: $purple-color;
         font-weight: 700;
         font-size: 1.3rem;
         margin-top: 20px;
@@ -169,9 +174,9 @@
 }
 
 .reserv-btn {
-    background-color: #5e227f;
-    border-color: #5e227f;
-    color: #f8b500;
+    background-color: $purple-color;
+    border-color: $purple-color;
+    color: $yellow-color;
     margin: 20px 20px 20px;
     font-weight: 600;
     width: 45%;
@@ -179,18 +184,18 @@
 }
 
 .reserv-btn:hover {
-    background-color: #d22780;
-    border-color: #d22780;
-    color: #f8b500;
+    background-color: $pink-color;
+    border-color: $pink-color;
+    color: $yellow-color;
 }
 
 .lot-icon {
     margin-right: 10px;
-    color: #d22780;
+    color: $pink-color;
 }
 
 .lot-icon-p {
-    color: #5e227f;
+    color: $purple-color;
     margin-right: 10px;
 }
 
@@ -201,7 +206,7 @@
     }
     .cena-tytul {
         padding: 0.5rem;
-        color: #5e227f;
+        color: $purple-color;
     }
     .span-cena {
         float: right;
@@ -211,20 +216,20 @@
     .package-btn {
         width: 60%;
         text-align: center;
-        color: #5e227f;
+        color: $purple-color;
         font-weight: bold;
     }
 }
 
 .suitcase-btn {
     text-align: center;
-    color: #5e227f;
+    color: $purple-color;
     font-weight: bold;
     float: right;
     margin-right: 3px;
 }
 .suitcase-btn:hover {
-    color: #5e227f;
+    color: $purple-color;
 }
 
 .img-suitcase {
@@ -2144,18 +2149,18 @@
 
 .seat {
     stroke-width: 2;
-    stroke: #5e227f;
-    fill: #f2f4fb;
+    stroke: $purple-color;
+    fill: $grey-color;
 }
 
 .reserved {
     stroke-width: 2;
-    stroke: #5e227f;
-    fill: #f8b500;
+    stroke: $purple-color;
+    fill: $yellow-color;
 }
 
 .seats-worning {
-    color: #d22780;
+    color: $pink-color;
     font-weight: 600;
     display: none;
 }
@@ -2171,8 +2176,8 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #5e227f;
-    color: #f2f4fb;
+    background-color: $purple-color;
+    color: $grey-color;
     font-weight: 700;
     text-align: center;
     padding: 10px 20px;

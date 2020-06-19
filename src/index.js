@@ -109,7 +109,6 @@ $('#log-in-btn').on('click', function () {
 
 $('#log-out-btn').on('click', function () {
     var valid = false;
-    console.log(valid);
     $('#log-in').show();
 });
 
@@ -118,14 +117,14 @@ function validate() {
     var un = $('#InputEmail').val();
     var pw = $('#InputPassword').val();
 
-
     fetch("users.json")
         .then((resp) => resp.json())
         .then(function (data) {
             data.forEach(function (element) {
+
                 if ((un == element.email) && (pw == element.password)) {
+                    // $('#wrong-password').hide();
                     valid = true;
-                    $('#wrong-password').hide();
                     if (check == 2) {
                         localStorage.removeItem("uname");
                         localStorage.setItem("uname", element.first_name);
@@ -137,7 +136,7 @@ function validate() {
                         $('#log-in').hide();
                     }
                 }
-                else {
+                else  {
                     $('#wrong-password').show();
                 }
             })
