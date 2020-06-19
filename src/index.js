@@ -1,8 +1,7 @@
-import { sum } from "./sum";
 import style from "./css/style.scss";
-import Icon from "./assets/img/proba.png";
 import 'bootstrap';
 import $ from 'jquery';
+import './assets/img/favicon.ico';
 
 //date
 
@@ -25,7 +24,7 @@ $(document).ready(function () {
 
     function peopleAdd() {
         var total = adult + child + baby;
-    
+
         if (total > 9) {
             return;
         }
@@ -35,66 +34,66 @@ $(document).ready(function () {
         }
     };
 
-$("#ok-btn").on("click", function () { peopleAdd(); });
-$("#people-btn").on("click", function () { peopleAdd(); });
+    $("#ok-btn").on("click", function () { peopleAdd(); });
+    $("#people-btn").on("click", function () { peopleAdd(); });
 
-function maxPeople() {
-    var total = adult + child + baby;
-    if (total > 9) {
-        $("#total-alert").show();
+    function maxPeople() {
+        var total = adult + child + baby;
+        if (total > 9) {
+            $("#total-alert").show();
+        }
+        if (total <= 9) {
+            $("#total-alert").hide();
+        }
     }
-    if (total <= 9) {
-        $("#total-alert").hide();
-    }
-}
 
-$('#adult-plus-btn').on('click', function () {
-    if (adult < 9) {
-        adult++;
-        document.querySelector("#adult-result").innerHTML = adult;
-    };
-    maxPeople();
-});
+    $('#adult-plus-btn').on('click', function () {
+        if (adult < 9) {
+            adult++;
+            document.querySelector("#adult-result").innerHTML = adult;
+        };
+        maxPeople();
+    });
 
-$('#adult-minus-btn').on('click', function () {
-    if (adult > 0) {
-        adult--;
-        document.querySelector("#adult-result").innerHTML = adult;
-    };
-    maxPeople();
-});
+    $('#adult-minus-btn').on('click', function () {
+        if (adult > 0) {
+            adult--;
+            document.querySelector("#adult-result").innerHTML = adult;
+        };
+        maxPeople();
+    });
 
-$('#child-plus-btn').on('click', function () {
-    if (child < adult * 3) {
-        child++;
-        document.querySelector("#child-result").innerHTML = child;
-    };
-    maxPeople();
-});
+    $('#child-plus-btn').on('click', function () {
+        if (child < adult * 3) {
+            child++;
+            document.querySelector("#child-result").innerHTML = child;
+        };
+        maxPeople();
+    });
 
-$('#child-minus-btn').on('click', function () {
-    if (child > 0) {
-        child--;
-        document.querySelector("#child-result").innerHTML = Math.max(Math.min(child, adult * 3), 0);
-    };
-    maxPeople();
-});
+    $('#child-minus-btn').on('click', function () {
+        if (child > 0) {
+            child--;
+            document.querySelector("#child-result").innerHTML = Math.max(Math.min(child, adult * 3), 0);
+        };
+        maxPeople();
+    });
 
-$('#baby-plus-btn').on('click', function () {
-    if (baby < adult) {
-        baby++;
-        document.querySelector("#baby-result").innerHTML = Math.max(Math.min(baby, adult), 0);
-    };
-    maxPeople();
-});
+    $('#baby-plus-btn').on('click', function () {
+        if (baby < adult) {
+            baby++;
+            document.querySelector("#baby-result").innerHTML = Math.max(Math.min(baby, adult), 0);
+        };
+        maxPeople();
+    });
 
-$('#baby-minus-btn').on('click', function () {
-    if (baby > 0) {
-        baby--;
-        document.querySelector("#baby-result").innerHTML = Math.max(Math.min(baby, adult), 0);
-    };
-    maxPeople();
-});
+    $('#baby-minus-btn').on('click', function () {
+        if (baby > 0) {
+            baby--;
+            document.querySelector("#baby-result").innerHTML = Math.max(Math.min(baby, adult), 0);
+        };
+        maxPeople();
+    });
 
 });
 
@@ -127,27 +126,32 @@ function validate() {
                 if ((un == element.email) && (pw == element.password)) {
                     valid = true;
                     $('#wrong-password').hide();
-                    if (check ==2) {
+                    if (check == 2) {
                         localStorage.removeItem("uname");
-                        localStorage.setItem("uname", element.first_name);                       
+                        localStorage.setItem("uname", element.first_name);
                         window.location = "/reservation.html"
                     }
                     else {
                         $('#LogIn').modal('toggle');
                         $('#hello').html(element.first_name + ", witaj na pokładzie");
-                        $('#log-in').hide();                     
+                        $('#log-in').hide();
                     }
                 }
                 else {
-                    $('#wrong-password').show();            
+                    $('#wrong-password').show();
                 }
             })
         });
-    };
+};
 
 // sprawdz
 
 $('#check-btn').on('click', function () {
+    $('#alert-miejsce').hide();
+    $('#alert-cel').hide();
+    $('#alert-data').hide();
+    $('#alert-pasazer').hide();
+
     var departure = $('#departure').val();
     var destination = $('#destination').val();
     var adult = parseInt($('#adult-result').text());
@@ -163,87 +167,34 @@ $('#check-btn').on('click', function () {
     localStorage.removeItem("dorosli");
     localStorage.removeItem("dzieci");
     localStorage.removeItem("bobasy");
-    localStorage.setItem("lot", `${dep} ---> ${dest}`);
+    localStorage.setItem("lot", `${dep} - ${dest}`);
     localStorage.setItem("data", date);
     localStorage.setItem("dorosli", adult);
     localStorage.setItem("dzieci", child);
-    localStorage.setItem("bobasy", baby);    
+    localStorage.setItem("bobasy", baby);
 
     if (departure == 0) {
-        alert("wybierz miejsce wylotu");
+        $('#alert-miejsce').show();
     }
-    else if (destination == 0 || departure == destination ) {
-        alert("wybierz miejce destynacji");
+    else if (destination == 0 || departure == destination) {
+        $('#alert-cel').show();
     }
     else if (date == "") {
-        alert("brak wybranej daty");
+        $('#alert-data').show();
     }
     else if (adult == 0) {
-        alert("brak pasażerów");
-    }    
+        $('#alert-pasazer').show();
+    }
     else {
         if (valid == true) {
             window.location = "/reservation.html";
         }
         else {
             check = 2
-            $('#check-btn').attr('data-toggle','modal').attr('data-target','#LogIn');
+            $('#check-btn').attr('data-toggle', 'modal').attr('data-target', '#LogIn');
         }
     }
-    
+
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-console.log(sum(10, 5))
-
-let heading = document.querySelector("#demo"),
-    sumValue = sum(10, 5);
-
-heading.innerHTML = `10 + 5 = ${sumValue}`;
-
-let myIcon = new Image();
-myIcon.src = Icon;
-document.querySelector("div").appendChild(myIcon);
 

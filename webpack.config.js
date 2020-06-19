@@ -26,7 +26,8 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: "index.html",
-            template: "./src/index.html"
+            template: "./src/index.html",
+            favicon: './src/assets/img/favicon.ico'
         }),
         new HtmlWebpackPlugin({
             filename: "reservation.html",
@@ -69,7 +70,7 @@ module.exports = {
               ]
             },
             prefix: 'icon'
-          })       
+          })               
     ],
     output: {
         path: path.resolve(__dirname, "dist"),
@@ -104,7 +105,7 @@ module.exports = {
     }, 
                
     {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(png|svg|jpg|gif|ico)$/,
         use: {
             loader: "file-loader",
             options: {
@@ -116,6 +117,7 @@ module.exports = {
         test: /\.(html)$/,
         use: ["html-loader"]
     },
+
     
 ]
 }

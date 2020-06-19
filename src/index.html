@@ -4,20 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>RexlaxLot</title>
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/ico"/>
 </head>
 
 <body>
 
   <!-- header section     -->
   <section class="header-section">
-    <ul class="nav justify-content-end">
-      <li class="nav-item"><a id="hello"></a></li>
-      <li class="nav-item">
-        <a class="nav-link active" data-toggle="modal" data-target="#LogIn" id="log-in" href="">Log in</a>
-      </li>
-      <li  class="nav-item"><a class="nav-link active"  id ="log-out-btn" href="">Log out</a></li>
-    </ul>
+
+    <nav class="navbar  navbar-expand-lg">
+      <div class="container-fluid header-container">
+        <h4 class="logo">RelaxLot</h4>
+
+        <div class="nav-login">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <p id="hello" class="hello"></p>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" data-toggle="modal" data-target="#LogIn" id="log-in" href="">Log in</a>
+            </li>
+            <li class="nav-item"><a class="nav-link active" id="log-out-btn" href="">Log out</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <!-- Log in modal -->
     <div class="modal fade" id="LogIn" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -37,15 +49,16 @@
                 <label for="InputPassword">Password</label>
                 <input type="password" class="form-control" id="InputPassword">
               </div>
-              <div class="alert alert-danger wrong-password" role="alert" id="wrong-password">Wrong password or email</div>
+              <div class="alert alert-danger wrong-password" role="alert" id="wrong-password">Wrong password or email
+              </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Anuluj</button>
-            <button type="button" class="btn btn-warning" id="log-in-btn">Zaloguj się</button>            
-          </div>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Anuluj</button>
+            <button type="button" class="btn btn-warning lot-btn" id="log-in-btn">Zaloguj się</button>
           </div>
         </div>
       </div>
+    </div>
     </div>
 
   </section>
@@ -70,11 +83,12 @@
 
     </div>
 
-    <!-- card main -->
 
-    <div class="all-cards col-lg-10 col-md-10 col-sm-10">
+    <div class="row">
 
-      <div class="card col-lg-3 col-md-10 col-sm-12 card-style-main">
+      <!-- card main -->
+
+      <div class="card col-xl-3 col-lg-3 card-style-main">
         <div class="card-body">
           <h5 class="card-title">Wyszukaj lotu ...</h5>
         </div>
@@ -93,20 +107,22 @@
           </select>
 
           <input placeholder="Select date" type="date" class="form-control form-input" id="flight-date">
-
           <button type="button" class="btn btn-outline-secondary form-control form-button" id="people-btn"></h1>
             Pasażerowie<small id="people"></small></button>
+          <div class="alert alert-danger form-input" role="alert" id="alert-miejsce">Wybierz miejsce wylotu</div>
+          <div class="alert alert-danger form-input" role="alert" id="alert-cel">Wybierz cel podroży</div>
+          <div class="alert alert-danger form-input" role="alert" id="alert-data">Wybierz datę podroży</div>
+          <div class="alert alert-danger form-input" role="alert" id="alert-pasazer">Dodaj pasażerów</div>
 
         </form>
         <div class="card-body">
-          <button type="button" class="btn btn-lg btn-warning search-btn" id="check-btn">Sprawdź</a></button>
+          <button type="button" class="btn btn-lg btn-warning lot-btn search-btn" id="check-btn">Sprawdź</a></button>
         </div>
       </div>
 
       <!-- card people -->
 
-
-      <div class="card col-lg-3 col-md-5 col-sm-5 card-style-people" id="card-style-people">
+      <div class="card col-xl-3 col-lg-3 card-style-people" id="card-style-people">
         <div class="card-body">
           <h5 class="card-title">Pasażerowie</h5>
         </div>
@@ -130,56 +146,24 @@
             <button type="button" class="btn btn-secondary" id="baby-plus-btn">+</button>
           </div>
           <div class="people-card">
-            <div class="alert alert-danger total-alert" role="alert" id="total-alert">Maksymalna liczba pasażerów: 9       </div>
+            <div class="alert alert-danger total-alert" role="alert" id="total-alert">Maksymalna liczba pasażerów: 9
+            </div>
           </div>
         </div>
         <div class="card-body">
-          <button type="button" class="btn btn-lg btn-warning ok-btn" id="ok-btn"><a href="#"
-              class="card-link">OK</a></button>
+          <button type="button" class="btn btn-lg btn-warning card-link lot-btn ok-btn" id="ok-btn">OK</button>
         </div>
       </div>
-
     </div>
-
-    <!-- test json -->
-
-    
-
-    
-
-
-
-
 
   </section>
 
   <!-- footer section     -->
   <section class="footer-section">
-    <div id="test-json"></div>
-    <p>Stopka</p>
+    <span>RelaxLot Poland</span>
+    <span>© 2020 RelaxLot</span>
   </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <!-- <h1 id="demo"></h1>
-    <p>Lorem ipsum dolor sit amet.</p>
-    <h1>Kasia</h1>
-    <div></div>
-    <div class="autoprefixer">hej</div>
-
-    <button type="button" class="btn btn-primary">Primary</button> -->
-
-  <!-- <script src="bundle.js"></script> -->
 </body>
 
 </html>
