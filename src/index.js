@@ -128,7 +128,7 @@ function validate() {
                     if (check == 2) {
                         localStorage.removeItem("uname");
                         localStorage.setItem("uname", element.first_name);
-                        window.location = "/reservation.html"
+                        window.location = "./reservation.html"
                     }
                     else {
                         $('#LogIn').modal('toggle');

@@ -16,11 +16,11 @@ $(document).ready(function () {
 
 
     $('#home-page').on('click', function () {
-        window.location = "/"
+        window.location = "./index.html"
     })
 
     $('#home-logo').on('click', function () {
-        window.location = "/"
+        window.location = "./index.html"
     })
 });
 
