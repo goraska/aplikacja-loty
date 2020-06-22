@@ -102,6 +102,7 @@ $(document).ready(function () {
 let valid = false;
 let check = 1;
 
+
 $('#log-in-btn').on('click', function () {
     validate();
 });
@@ -114,6 +115,7 @@ $('#log-out-btn').on('click', function () {
 function validate() {
     let un = $('#InputEmail').val();
     let pw = $('#InputPassword').val();
+    let userFounded = 0
 
     fetch("https://raw.githubusercontent.com/goraska/json-loty/master/users.json")
         .then((resp) => resp.json())
@@ -121,23 +123,32 @@ function validate() {
             data.forEach(function (element) {
 
                 if ((un == element.email) && (pw == element.password)) {
-                    // $('#wrong-password').hide();
-                    valid = true;
-                    if (check == 2) {
-                        localStorage.removeItem("uname");
-                        localStorage.setItem("uname", element.first_name);
-                        window.location = "./reservation.html"
-                    }
-                    else {
-                        $('#LogIn').modal('toggle');
-                        $('#hello').html(element.first_name + ", witaj na pokładzie");
-                        $('#log-in').hide();
-                    }
+                    userFounded = 1
+                    localStorage.removeItem("uname");
+                    localStorage.setItem("uname", element.first_name);
+                    $('#hello').html(element.first_name + ", witaj na pokładzie");
+                    console.log(userFounded, element.email, element.password)
                 }
-                else  {
-                    $('#wrong-password').show();
+                else {
+                    console.log(userFounded, element.email, element.password)
                 }
             })
+        })
+        .then(function () {
+            if (userFounded == 1) {
+                $('#wrong-password').hide();
+                valid = true;
+                if (check == 2) {
+                    window.location = "./reservation.html"
+                }
+                else {
+                    $('#LogIn').modal('toggle');
+                    $('#log-in').hide();
+                }
+            }
+            else {
+                $('#wrong-password').show();
+            }
         });
 };
 
@@ -155,8 +166,8 @@ $('#check-btn').on('click', function () {
     adult = parseInt($('#adult-result').text());
     child = parseInt($('#child-result').text());
     baby = parseInt($('#baby-result').text());
-    
- 
+
+
     let dep = $("#departure option:selected").html()
     let dest = $("#destination option:selected").html()
 
