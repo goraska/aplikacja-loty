@@ -115,7 +115,7 @@ $('#log-out-btn').on('click', function () {
 function validate() {
     let un = $('#InputEmail').val();
     let pw = $('#InputPassword').val();
-    let userFounded = 0
+    let userFounded = false
 
     fetch("https://raw.githubusercontent.com/goraska/json-loty/master/users.json")
         .then((resp) => resp.json())
@@ -123,7 +123,7 @@ function validate() {
             data.forEach(function (element) {
 
                 if ((un == element.email) && (pw == element.password)) {
-                    userFounded = 1
+                    userFounded = true
                     localStorage.removeItem("uname");
                     localStorage.setItem("uname", element.first_name);
                     $('#hello').html(element.first_name + ", witaj na pokładzie");
@@ -135,7 +135,7 @@ function validate() {
             })
         })
         .then(function () {
-            if (userFounded == 1) {
+            if (userFounded == true) {
                 $('#wrong-password').hide();
                 valid = true;
                 if (check == 2) {
