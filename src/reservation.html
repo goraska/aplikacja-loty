@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>RelaxLot Reservation</title>
-	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/ico"/>
+	<link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/ico" />
 </head>
 
 <body>
@@ -44,7 +44,6 @@
 							<div class="sidebar-header">
 								<h3>Podsumowanie</h3>
 							</div>
-							<hr>
 							<h5><i class="fas fa-plane-departure lot-icon-p"></i>LOT</h5>
 							<h6 id="lot"></h6>
 							<h5><i class="fas fa-calendar-alt lot-icon-p"></i>DATA</h5>
@@ -58,7 +57,8 @@
 							<h5><i class="fas fa-shopping-bag lot-icon-p"></i>USŁUGI</h5>
 							<h6 id="uslugi"></h6>
 							<div class="sum">
-								<span>SUMA :</span><span class="suma">PLN</span><span id="suma" class="suma">0</span>
+								<div>SUMA :</div>
+								<div><span id="suma" class="suma">0</span><span class="suma">PLN</span></div>
 							</div>
 
 							<button type="button" id="reserv-btn"
@@ -112,12 +112,22 @@
 										<h5 class="card-title">Cena:</h5>
 									</div>
 									<ul class="list-group list-group-flush">
-										<li class="list-group-item"><span><i class="fas fa-user lot-icon-p"></i>dorosły:
-											</span><span id="p-cena-d" class="span-cena">PLN</span></li>
-										<li class="list-group-item"><span><i class="fas fa-child lot-icon-p"></i>dziecko
-												(2-14 lat): </span><span id="p-cena-c" class="span-cena">PLN</span></li>
-										<li class="list-group-item"><span><i class="fas fa-baby lot-icon-p"></i>bobas:
-											</span><span class="span-cena">bezpłatnie</span></li>
+										<li class="list-group-item">
+											<div class="cena-container">
+												<div><i class="fas fa-user lot-icon-p"></i>dorosły:</div>
+												<div id="p-cena-d" class="div-cena">PLN</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="cena-container">
+												<div><i class="fas fa-child lot-icon-p"></i>dziecko (2-14 lat):</div>
+												<div id="p-cena-c" class="div-cena">PLN</div>
+											</div>
+										<li class="list-group-item">
+											<div class="cena-container">
+												<div><i class="fas fa-baby lot-icon-p"></i>bobas:</div>
+												<div class="div-cena">bezpłatnie</div>
+											</div>
 									</ul>
 									<div class="card-body text-center button-aligment">
 										<button type="button" id="plus-btn"
@@ -154,12 +164,22 @@
 										<h5 class="card-title">Cena:</h5>
 									</div>
 									<ul class="list-group list-group-flush">
-										<li class="list-group-item"><span><i class="fas fa-user lot-icon-p"></i>dorosły:
-											</span><span id="g-cena-d" class="span-cena">PLN</span></li>
-										<li class="list-group-item"><span><i class="fas fa-child lot-icon-p"></i>dziecko
-												(2-14 lat): </span><span id="g-cena-c" class="span-cena">PLN</span></li>
-										<li class="list-group-item"><span><i class="fas fa-baby lot-icon-p"></i>bobas:
-											</span><span class="span-cena">bezpłatnie</span></li>
+										<li class="list-group-item">
+											<div class="cena-container">
+												<div><i class="fas fa-user lot-icon-p"></i>dorosły:</div>
+												<div id="g-cena-d" class="div-cena">PLN</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="cena-container">
+												<div><i class="fas fa-child lot-icon-p"></i>dziecko (2-14 lat):</div>
+												<div id="g-cena-c" class="div-cena">PLN</div>
+											</div>
+										<li class="list-group-item">
+											<div class="cena-container">
+												<div><i class="fas fa-baby lot-icon-p"></i>bobas:</div>
+												<div class="div-cena">bezpłatnie</div>
+											</div>
 									</ul>
 									<div class="card-body text-center button-aligment">
 										<button type="button" id="go-btn"
@@ -188,15 +208,22 @@
 										<h5 class="card-title">Cena:</h5>
 									</div>
 									<ul class="list-group list-group-flush">
-										<li class="list-group-item"><span class="span-osoba"><i
-													class="fas fa-user lot-icon-p"></i>dorosły: </span><span
-												id="b-cena-d" class="span-cena">PLN</span></li>
-										<li class="list-group-item"><span class="span-osoba"><i
-													class="fas fa-child lot-icon-p"></i>dziecko (2-14 lat):
-											</span><span id="b-cena-c" class="span-cena">PLN</span></li>
-										<li class="list-group-item"><span class="span-osoba"><i
-													class="fas fa-baby lot-icon-p"></i>bobas: </span><span
-												class="span-cena">bezpłatnie</span></li>
+										<li class="list-group-item">
+											<div class="cena-container">
+												<div><i class="fas fa-user lot-icon-p"></i>dorosły:</div>
+												<div id="b-cena-d" class="div-cena">PLN</div>
+											</div>
+										</li>
+										<li class="list-group-item">
+											<div class="cena-container">
+												<div><i class="fas fa-child lot-icon-p"></i>dziecko (2-14 lat):</div>
+												<div id="b-cena-c" class="div-cena">PLN</div>
+											</div>
+										<li class="list-group-item">
+											<div class="cena-container">
+												<div><i class="fas fa-baby lot-icon-p"></i>bobas:</div>
+												<div class="div-cena">bezpłatnie</div>
+											</div>
 									</ul>
 									<div class="card-body text-center button-aligment">
 										<button type="button" id="basic-btn"
@@ -214,7 +241,7 @@
 							<div class="col-lg-5 package opt-additional">
 								<div class="card">
 									<div class="card-header">
-										<h5 class="card-title">
+										<h5 class="card-title opt-package-cont">
 											<span>DODAJ BAGAŻ REJSTROWANY</span>
 											<span><button type="button" id="suitcase-btn"
 													class="btn btn-warning suitcase-btn" data-toggle="modal"
@@ -321,7 +348,7 @@
 							<div class="col-lg-5 package opt-additional">
 								<div class="card">
 									<div class="card-header">
-										<h5 class="card-title">
+										<h5 class="card-title opt-package-cont">
 											<span>WYBÓR MIEJSCA</span>
 											<span><button type="button" id="suitcase-btn"
 													class="btn btn-warning suitcase-btn" data-toggle="modal"

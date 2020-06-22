@@ -166,11 +166,18 @@ $pink-color: #d22780;
         font-size: 1.3rem;
         margin-top: 20px;
         padding: 5px 10px;
+        display: flex;
+        justify-content: space-between;
         .suma {
-            float: right;
             margin-right: 20px;
+            align-self: flex-end;
         }
     }
+}
+
+.summary {
+    display: flex;
+    flex-direction: column;
 }
 
 .reserv-btn {
@@ -180,7 +187,7 @@ $pink-color: #d22780;
     margin: 20px 20px 20px;
     font-weight: 600;
     width: 45%;
-    float: right;
+    align-self: flex-end;
 }
 
 .reserv-btn:hover {
@@ -199,6 +206,10 @@ $pink-color: #d22780;
     margin-right: 10px;
 }
 
+
+
+
+
 .opt-packages {
     justify-content: center;
     .package {
@@ -208,11 +219,14 @@ $pink-color: #d22780;
         padding: 0.5rem;
         color: $purple-color;
     }
-    .span-cena {
-        float: right;
-        margin-right: 10px;
-        font-weight: bold;
-    }
+    .cena-container {
+        display: flex;
+        justify-content: space-between;
+        .div-cena {
+            margin-right: 10px;
+            font-weight: bold;
+        } 
+    }   
     .package-btn {
         width: 60%;
         text-align: center;
@@ -221,12 +235,19 @@ $pink-color: #d22780;
     }
 }
 
+.opt-package-cont {
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .suitcase-btn {
     text-align: center;
     color: $purple-color;
     font-weight: bold;
-    float: right;
-    margin-right: 3px;
+    margin-right: 5px;
+    display: flex;
+    justify-content: flex-end;
 }
 .suitcase-btn:hover {
     color: $purple-color;

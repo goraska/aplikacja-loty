@@ -1,4 +1,3 @@
-import style from "./css/style.scss";
 import 'bootstrap';
 import $ from 'jquery';
 import './assets/img/favicon.ico';
@@ -8,22 +7,22 @@ import './assets/img/favicon.ico';
 $(function () {
     $('[type="date"]').prop('max', function () {
 
-        var aYearFromNow = new Date();
+        let aYearFromNow = new Date();
         aYearFromNow.setFullYear(aYearFromNow.getFullYear() + 1);
         return aYearFromNow.toJSON().split('T')[0];
     });
 });
 
-var adult = parseInt($('#adult-result').text());
-var child = parseInt($('#child-result').text());
-var baby = parseInt($('#baby-result').text());
+let adult = parseInt($('#adult-result').text());
+let child = parseInt($('#child-result').text());
+let baby = parseInt($('#baby-result').text());
 
 // pasażerowie 
 
 $(document).ready(function () {
 
     function peopleAdd() {
-        var total = adult + child + baby;
+        let total = adult + child + baby;
 
         if (total > 9) {
             return;
@@ -38,7 +37,7 @@ $(document).ready(function () {
     $("#people-btn").on("click", function () { peopleAdd(); });
 
     function maxPeople() {
-        var total = adult + child + baby;
+        let total = adult + child + baby;
         if (total > 9) {
             $("#total-alert").show();
         }
@@ -100,22 +99,21 @@ $(document).ready(function () {
 
 // log-in
 
-var valid = false;
-var check = 1;
+let valid = false;
+let check = 1;
 
 $('#log-in-btn').on('click', function () {
     validate();
 });
 
 $('#log-out-btn').on('click', function () {
-    var valid = false;
+    valid = false;
     $('#log-in').show();
 });
 
 function validate() {
-    var count = 3;
-    var un = $('#InputEmail').val();
-    var pw = $('#InputPassword').val();
+    let un = $('#InputEmail').val();
+    let pw = $('#InputPassword').val();
 
     fetch("https://raw.githubusercontent.com/goraska/json-loty/master/users.json")
         .then((resp) => resp.json())
@@ -151,15 +149,16 @@ $('#check-btn').on('click', function () {
     $('#alert-data').hide();
     $('#alert-pasazer').hide();
 
-    var departure = $('#departure').val();
-    var destination = $('#destination').val();
-    var adult = parseInt($('#adult-result').text());
-    var child = parseInt($('#child-result').text());
-    var baby = parseInt($('#baby-result').text());
-    var date = $('#flight-date').val();
-
-    var dep = $("#departure option:selected").html()
-    var dest = $("#destination option:selected").html()
+    let departure = $('#departure').val();
+    let destination = $('#destination').val();
+    let date = $('#flight-date').val();
+    adult = parseInt($('#adult-result').text());
+    child = parseInt($('#child-result').text());
+    baby = parseInt($('#baby-result').text());
+    
+ 
+    let dep = $("#departure option:selected").html()
+    let dest = $("#destination option:selected").html()
 
     localStorage.removeItem("lot");
     localStorage.removeItem("data");
